@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #fafafa;
+  color: #111111;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes nav-heartbeat {
+  0%,
+  100% {
+    transform: translateX(-50%) scaleX(0.2);
+    opacity: 0.55;
+  }
+
+  30% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+
+  55% {
+    transform: translateX(-50%) scaleX(0.78);
+    opacity: 0.9;
+  }
+
+  80% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+}
+
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.35rem;
+  height: 2px;
+  width: 70%;
+  border-radius: 9999px;
+  background: currentColor;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline:focus-visible::after,
+.nav-link-underline-active::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline:focus-visible::after {
+  animation: nav-heartbeat 720ms ease-in-out infinite;
+}
