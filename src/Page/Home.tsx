@@ -107,7 +107,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
                   <span className="text-sm font-medium text-slate-500">Connect:</span>
                   <a
-                    href="mailto:shahabdad@example.com"
+                    href="mailto:shahabdad50@gmail.com"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950"
                     aria-label="Send email"
                   >
@@ -134,7 +134,7 @@ export default function Home() {
             <div className="relative flex items-center justify-center px-5 py-8 sm:px-8 sm:py-10 lg:px-8 lg:py-12">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.18),transparent_40%)]" />
               <div className="relative z-10 w-full max-w-lg sm:max-w-xl lg:max-w-2xl">
-                <div className="overflow-hidden rounded-4xl border border-white/10 bg-white/5 shadow-2xl backdrop-blur-sm">
+                <div className="overflow-hidden rounded-4xl border border-slate-200/60 dark:border-white/10 bg-gradient-to-tr from-slate-100 to-indigo-50/50 dark:from-[#13141a] dark:to-[#1e202d] shadow-2xl backdrop-blur-sm">
                   <img
                     src={profileImage}
                     alt="Shahab Dad"

@@ -46,7 +46,7 @@ function Navbar() {
           href="/resume.pdf"
           className="inline-flex h-10 items-center gap-2 rounded-full bg-[#111] px-4 text-sm font-semibold text-white transition-transform duration-200 hover:-translate-y-px hover:bg-black sm:h-12 sm:px-5 sm:text-base lg:h-14 lg:px-6"
         >
-          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current stroke-[1.8] sm:h-5 sm:w-5">
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-white stroke-[1.8] sm:h-5 sm:w-5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v10m0 0 4-4m-4 4-4-4M5 17.5V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1.5" />
           </svg>
           <span className="whitespace-nowrap text-sm text-white font-semibold sm:text-base">Download Resume</span>
