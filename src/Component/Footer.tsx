@@ -1,5 +1,3 @@
-
-// export default Footer;
 import { NavLink } from 'react-router-dom';
 import { 
   Mail, 
