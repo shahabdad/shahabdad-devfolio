@@ -1,152 +1,206 @@
-import { useState } from 'react';
-import { FolderKanban, ExternalLink, Code2 } from 'lucide-react';
-
-const GithubIcon = () => (
-  <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-    <path d="M9 18c-4.51 2-5-2-7-2" />
-  </svg>
-);
+import { ExternalLink, ArrowRight } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Project() {
-  const [filter, setFilter] = useState('all');
-
   const projects = [
     {
-      title: 'E-Commerce Hub',
-      category: 'web',
-      description: 'A full-featured corporate online store. Integrates payment systems, admin inventories, and user cart databases.',
-      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind'],
-      demoLink: '#',
-      githubLink: '#',
+      title: "Tata Ride Website",
+      description: "Tata Ride is a professional taxi booking frontend website built with React, CSS, and Bootstrap, fully responsive and user-friendly.",
+      workDays: "2 Days",
+      tech: ['React', 'CSS', 'Bootstrap'],
+      demoLink: "https://ta-ta-ride.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1593950315186-76a92f6ae64e?auto=format&fit=crop&q=80&w=600&h=400"
     },
     {
-      title: 'Task Management Portal',
-      category: 'web',
-      description: 'Interactive dashboard for team collaboration and task organization, featuring dynamic drag-and-drop actions.',
-      tech: ['React.js', 'JWT Auth', 'Tailwind CSS', 'Vite'],
-      demoLink: '#',
-      githubLink: '#',
+      title: "Currency Converter",
+      description: "A collaborative CRM tool for sales and marketing.",
+      workDays: "30 Days",
+      tech: ['React', 'Vite', 'APIs'],
+      demoLink: "https://currency-converter-3.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&q=80&w=600&h=400"
     },
     {
-      title: 'Mobile Chat App',
-      category: 'mobile',
-      description: 'A cross-platform native messaging application featuring real-time subscriptions, secure auth, and push messages.',
-      tech: ['React Native', 'Expo', 'Firebase Firestore', 'Auth'],
-      demoLink: '#',
-      githubLink: '#',
+      title: "Quiz App",
+      description: "A C++ language quiz application where users can test their knowledge and potentially earn rewards by participating.",
+      workDays: "12 Days",
+      tech: ['React', 'TypeScript', 'Tailwind'],
+      demoLink: "https://quiz-ecru-nu.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600&h=400"
     },
     {
-      title: 'DevConnect Platform',
-      category: 'web',
-      description: 'A portal connecting developers with open job listings, custom portfolio builders, and technical forums.',
-      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
-      demoLink: '#',
-      githubLink: '#',
+      title: "QR Code Generator",
+      description: "A responsive web application that allows users to generate QR codes instantly from text or URLs. Features clean designs and easy downloads.",
+      workDays: "2 Hours",
+      tech: ['React', 'HTML5', 'CSS3'],
+      demoLink: "https://qr-code-delta-lemon.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600&h=400"
     },
     {
-      title: 'Fitness Tracker App',
-      category: 'mobile',
-      description: 'Mobile workout tracker tracking daily routine stats, hydration progress, and custom routines.',
-      tech: ['React Native', 'AsyncStorage', 'Lucide Icons'],
-      demoLink: '#',
-      githubLink: '#',
+      title: "Weather App",
+      description: "A real-time weather web application that detects the user's location automatically and shows live weather updates with city-based search.",
+      workDays: "2 Days",
+      tech: ['React', 'Tailwind CSS', 'API'],
+      demoLink: "https://weather-orpin-seven.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=600&h=400"
     },
+    {
+      title: "Portfolio Website",
+      description: "A professional portfolio showcasing skills and projects.",
+      workDays: "15 Days",
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      demoLink: "https://metro.up.railway.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600&h=400"
+    },
+    {
+      title: "Blog Platform",
+      description: "A dynamic platform for creating and managing blogs.",
+      workDays: "18 Days",
+      tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+      demoLink: "https://github.com/shahabdad/BlogApp",
+      githubLink: "https://github.com/shahabdad/BlogApp",
+      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600&h=400"
+    },
+    {
+      title: "Tic-Tac-Toe Deluxe",
+      description: "A sleek and modern Tic-Tac-Toe game with dark mode, interactive animations, and a fully responsive design for all devices.",
+      workDays: "3-5 Days",
+      tech: ['React', 'Tailwind CSS', 'Framer Motion'],
+      demoLink: "https://game-dad.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?auto=format&fit=crop&q=80&w=600&h=400"
+    },
+    {
+      title: "Urlshortner Platform",
+      description: "URL Platform is a simple and efficient web application for event planning and coordination, helping users manage events and schedules with ease.",
+      workDays: "1 Day",
+      tech: ['Node.js', 'Express', 'MongoDB'],
+      demoLink: "https://url-shortner-v7hh.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600&h=400"
+    },
+    {
+      title: "Tic Tac Toe Game",
+      description: "Tic Tac Toe is a classic two-player game built using React. This interactive web app allows players to take turns marking X and O on a 3x3 grid.",
+      workDays: "1 Day",
+      tech: ['React', 'CSS', 'JavaScript'],
+      demoLink: "https://game-dad.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1606167668584-78701c57f13d?auto=format&fit=crop&q=80&w=600&h=400"
+    },
+    {
+      title: "Scientific Calculator",
+      description: "Scientific Calculator is a responsive and interactive web tool that allows users to perform basic and advanced mathematical calculations.",
+      workDays: "1 Day",
+      tech: ['React', 'CSS', 'JavaScript'],
+      demoLink: "https://scientific-calculator-beta-beige.vercel.app/",
+      githubLink: "#",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=600&h=400"
+    }
   ];
 
-  const filteredProjects = projects.filter(
-    (p) => filter === 'all' || p.category === filter
-  );
-
   return (
-    <section className="min-h-screen py-20 px-6 sm:px-10 lg:px-16 bg-slate-50 dark:bg-[#0c0c0c] text-slate-800 dark:text-neutral-300 font-space transition-colors duration-300">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section className="min-h-screen py-20 px-4 sm:px-6 lg:px-[90px] bg-white text-slate-800 font-space overflow-hidden">
+      <div className="w-full space-y-12">
 
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-4 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-indigo-600 dark:text-indigo-400 text-xs font-semibold uppercase tracking-wider">
-              <FolderKanban size={12} className="animate-pulse" />
-              <span>My Projects</span>
+        <ScrollReveal animationClass="animate-fade-in-up" delay={50}>
+          <div className="flex justify-between items-end pb-4 border-b border-slate-100">
+            <div className="space-y-2 text-left">
+              <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#737373]">
+                PORTFOLIO
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+                Featured Projects
+              </h1>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-              Selected Works
-            </h1>
-            <p className="text-sm text-slate-500 dark:text-neutral-400 font-light leading-relaxed">
-              A gallery of software products I have built. Use filters to check by development platforms.
-            </p>
+            <a href="#projects" className="flex items-center gap-1.5 text-base font-bold text-slate-900 hover:text-slate-600 transition-colors">
+              <span>All Work ({projects.length})</span>
+              <ArrowRight size={16} />
+            </a>
           </div>
-
-          {/* Filter Tabs */}
-          <div className="flex items-center gap-1.5 p-1.5 rounded-full border border-slate-200/60 dark:border-[#222] bg-white dark:bg-[#111] w-fit shadow-sm">
-            {['all', 'web', 'mobile'].map((type) => (
-              <button
-                key={type}
-                onClick={() => setFilter(type)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${filter === type
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-                    : 'text-[#737373] hover:text-slate-900 dark:hover:text-white'
-                  }`}
-              >
-                {type === 'all' ? 'All' : type === 'web' ? 'Web' : 'Mobile'}
-              </button>
-            ))}
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Project Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map((p) => (
-            <div
-              key={p.title}
-              className="group relative rounded-3xl border border-slate-200/60 dark:border-[#1f1f1f] bg-white dark:bg-[#111] p-6 hover:border-slate-300 dark:hover:border-[#333] hover:shadow-xl dark:hover:shadow-black/40 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p, idx) => (
+            <ScrollReveal
+              key={idx}
+              animationClass="animate-slide-up-fade"
+              delay={(idx % 3) * 150}
+              className="flex flex-col"
             >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-[#181818] w-fit text-[#737373] group-hover:scale-105 transition-transform duration-300">
-                    <Code2 className="h-5 w-5 text-indigo-500" />
+              <div
+                className="group bg-white rounded-3xl border border-slate-200/60 overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.01)] hover:shadow-md hover:scale-[1.01] transition-all duration-300 flex flex-col justify-between h-full"
+              >
+                {/* Card Image */}
+                <div className="w-full h-48 overflow-hidden bg-slate-50">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
+
+                {/* Card Content */}
+                <div className="p-6 flex flex-col flex-grow justify-between space-y-4">
+                  <div className="space-y-3">
+                    {/* Tech Badges */}
+                    <div className="flex flex-wrap gap-2">
+                      {p.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 rounded-full text-sm font-semibold bg-slate-100 text-slate-600"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Title & Duration */}
+                    <div className="flex justify-between items-start gap-2">
+                      <h3 className="text-xl font-extrabold text-slate-900 leading-tight">
+                        {p.title}
+                      </h3>
+                      <span className="text-xs font-semibold bg-indigo-50 text-indigo-600 px-2.5 py-1 rounded-full shrink-0">
+                        {p.workDays}
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-base text-slate-500 leading-relaxed font-light">
+                      {p.description}
+                    </p>
                   </div>
-                  {/* Action Icons */}
-                  <div className="flex items-center gap-3">
+
+                  {/* Action Buttons */}
+                  <div className="grid grid-cols-2 gap-3 pt-2">
                     <a
                       href={p.githubLink}
-                      className="text-[#737373] hover:text-slate-900 dark:hover:text-white transition-all duration-200 hover:scale-110"
-                      aria-label="GitHub Repository"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#111] hover:bg-black text-white text-base font-semibold rounded-xl transition-all"
                     >
-                      <GithubIcon />
+                      GitHub
                     </a>
                     <a
                       href={p.demoLink}
-                      className="text-[#737373] hover:text-slate-900 dark:hover:text-white transition-all duration-200 hover:scale-110"
-                      aria-label="Live Demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-base font-semibold rounded-xl transition-all"
                     >
-                      <ExternalLink size={18} />
+                      <ExternalLink size={14} />
+                      Live Demo
                     </a>
                   </div>
                 </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-                    {p.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 dark:text-neutral-400 leading-relaxed font-light">
-                    {p.description}
-                  </p>
-                </div>
               </div>
-
-              {/* Tech Badges */}
-              <div className="mt-6 pt-4 border-t border-slate-100 dark:border-[#1c1c1c] flex flex-wrap gap-1.5">
-                {p.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2 py-0.5 rounded text-[11px] bg-slate-100 dark:bg-[#1b1b1b] text-slate-600 dark:text-neutral-400 font-medium"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
