@@ -84,7 +84,7 @@ export default function Resume() {
 
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-4 sm:px-6 lg:px-8 font-space print:bg-white print:py-0 print:px-0">
-      
+
       {/* Print Action Header (Hidden during Print) */}
       <div className="max-w-4xl mx-auto mb-6 flex justify-between items-center print:hidden">
         <a
@@ -94,7 +94,7 @@ export default function Resume() {
           <ArrowLeft size={16} />
           Back to Portfolio
         </a>
-        
+
         <button
           onClick={handlePrint}
           className="inline-flex h-10 items-center gap-2 rounded-full bg-slate-950 px-5 text-sm font-semibold text-white transition-all hover:bg-slate-900 cursor-pointer shadow-sm"
@@ -106,7 +106,7 @@ export default function Resume() {
 
       {/* Main Resume Sheet */}
       <div className="max-w-4xl mx-auto bg-white shadow-xl border border-slate-200/50 rounded-3xl p-8 sm:p-12 print:shadow-none print:border-none print:p-0 print:m-0 print:max-w-full">
-        
+
         {/* Name / Title */}
         <div className="border-b border-slate-200 pb-6 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
           <div className="space-y-1.5 text-left">
@@ -166,7 +166,7 @@ export default function Resume() {
 
         {/* Grid for two columns (Main & Sidebar) */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.8fr_1.2fr] gap-8 pt-6">
-          
+
           {/* Main Column (Experience & Projects) */}
           <div className="space-y-8 text-left">
             {/* Experience */}
@@ -245,6 +245,7 @@ export default function Resume() {
                 ))}
               </div>
             </div>
+
 
             {/* Education */}
             <div className="space-y-4">
