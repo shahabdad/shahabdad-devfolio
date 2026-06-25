@@ -321,7 +321,7 @@ export default function Skill() {
                           {/* Styled progress bar */}
                           <div className="h-4 w-full bg-slate-100 rounded-full overflow-hidden relative">
                             <div
-                              className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+                              className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full transition-all duration-1000 ease-out"
                               style={{ width: animate ? skill.level : '0%' }}
                             />
                           </div>

@@ -129,13 +129,13 @@ function Navbar() {
             <a
               href="#home"
               onClick={(e) => handleNavClick(e, 'home')}
-              className="text-base font-semibold tracking-[-0.03em] text-[#111] sm:text-xl lg:text-2xl whitespace-nowrap"
+              className="text-sm font-semibold tracking-[-0.03em] text-[#111] min-[380px]:text-base sm:text-xl lg:text-2xl whitespace-nowrap"
             >
               Shahab Dad
             </a>
           </div>
 
-          <nav className="hidden items-center gap-4 text-base font-semibold text-[#111] lg:flex lg:gap-6 lg:text-lg xl:gap-7 xl:text-xl">
+          <nav className="hidden items-center text-sm font-semibold text-[#111] lg:flex lg:gap-2.5 min-[1150px]:gap-4 min-[1150px]:text-base xl:gap-6 xl:text-lg 2xl:gap-8 2xl:text-xl">
             {links.map((link) => {
               const isActive = activeSection === link.id;
               return (
@@ -144,7 +144,7 @@ function Navbar() {
                   href={`#${link.id}`}
                   onClick={(e) => handleNavClick(e, link.id)}
                   className={[
-                    'nav-link-underline rounded-full px-3 py-2 transition-colors duration-200 lg:px-4 lg:py-2.5',
+                    'nav-link-underline rounded-full px-2.5 py-2 transition-colors duration-200 lg:px-3 lg:py-2 xl:px-4 xl:py-2.5',
                     isActive ? 'text-[#111] nav-link-underline-active' : 'text-slate-500 hover:text-[#111]'
                   ].join(' ')}
                 >
@@ -157,13 +157,13 @@ function Navbar() {
           <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/resume"
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#111] px-3.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-black sm:h-12 sm:px-5 sm:text-base lg:h-14 lg:px-6 max-[390px]:h-10 max-[390px]:w-10 max-[390px]:p-0 max-[390px]:justify-center"
+              className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-[#111] px-3.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-px hover:bg-black sm:h-12 sm:px-5 sm:text-base lg:h-14 lg:px-6 max-[480px]:h-10 max-[480px]:w-10 max-[480px]:p-0 max-[480px]:justify-center"
             >
               <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4.5 w-4.5 fill-none stroke-white stroke-[1.8] sm:h-5 sm:w-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v10m0 0 4-4m-4 4-4-4M5 17.5V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1.5" />
               </svg>
               <span className="hidden sm:inline whitespace-nowrap text-sm text-white font-semibold sm:text-base">Download Resume</span>
-              <span className="inline sm:hidden max-[390px]:hidden whitespace-nowrap text-sm text-white font-semibold">Resume</span>
+              <span className="inline sm:hidden max-[480px]:hidden whitespace-nowrap text-sm text-white font-semibold">Resume</span>
             </a>
 
             {/* Hamburger Menu Toggle Button */}
