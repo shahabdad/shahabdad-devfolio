@@ -1,4 +1,5 @@
-import React, { useState, useRef, MouseEvent } from 'react';
+import React, { useState, useRef } from 'react';
+import type { MouseEvent } from 'react';
 
 interface ThreeDTiltProps {
   children: React.ReactNode;
