@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Globe, ArrowLeft, Printer } from 'lucide-react';
+import profileImage from '../assets/Profile.png';
 
 export default function Resume() {
   const handlePrint = () => {
@@ -66,19 +67,29 @@ export default function Resume() {
 
   const projects = [
     {
-      title: 'Tata Ride Website',
-      tech: 'React, CSS, Bootstrap',
-      description: 'Professional taxi booking frontend website, fully responsive and user-friendly.'
+      title: 'Full-Stack E-Commerce Ecosystem',
+      tech: 'React Native, Node.js, Express, Clerk, Stripe, Sevalla',
+      description: 'A complete e-commerce suite consisting of a React Native & Expo mobile application, an Express REST API, and an admin dashboard featuring product management, analytics, Inngest jobs, and Sentry tracking.'
+    },
+    {
+      title: 'AI AGENT (SignalsAPI)',
+      tech: 'React, TypeScript, Tailwind, Bootstrap',
+      description: 'A high-converting B2B SaaS landing page built from Figma, showcasing an AI sales agent that automates lead generation, LinkedIn outreach, and calendar bookings.'
     },
     {
       title: 'Blog Platform',
       tech: 'React, Node.js, Express, MongoDB',
-      description: 'Full-featured blog platform with secure user authentication, rich text editing, and post categorization.'
+      description: 'MERN blogging platform enabling users to create, manage, and share blog posts, with secure authentication, category filtering, likes, comments, and Cloudinary uploads.'
     },
     {
-      title: 'Weather App',
-      tech: 'React, Tailwind CSS, API',
-      description: 'Real-time weather application with automated device location detection and dynamic icon updates.'
+      title: 'CRM Analytics Dashboard',
+      tech: 'React, Vite, Recharts, APIs',
+      description: 'A collaborative CRM tool for sales and marketing featuring real-time charts, user tracking, and interactive data visualization.'
+    },
+    {
+      title: 'QR Code Generator',
+      tech: 'React, CSS3, Vite, HTML5',
+      description: 'An advanced web application for generating and scanning custom QR codes with color customization, logo overlays, and historical logs.'
     }
   ];
 
@@ -107,39 +118,46 @@ export default function Resume() {
       {/* Main Resume Sheet */}
       <div className="max-w-4xl mx-auto bg-white shadow-xl border border-slate-200/50 rounded-3xl p-8 sm:p-12 print:shadow-none print:border-none print:p-0 print:m-0 print:max-w-full">
 
-        {/* Name / Title */}
-        <div className="border-b border-slate-200 pb-6 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
-          <div className="space-y-1.5 text-left">
-            <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-955">
-              Shahab Dad
-            </h1>
-            <p className="text-lg font-bold text-red-600 tracking-wider uppercase">
-              Full Stack & React Native Developer
-            </p>
+        {/* Header: Name, Title, Photo & Contacts */}
+        <div className="border-b border-slate-200 pb-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 text-center sm:text-left">
+            <img
+              src={profileImage}
+              alt="Shahab Dad"
+              className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover shadow-md border-2 border-slate-100"
+            />
+            <div className="space-y-2 mt-2">
+              <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900">
+                Shahab Dad
+              </h1>
+              <p className="text-lg font-bold text-indigo-650 tracking-wider uppercase">
+                Full Stack & React Native Developer
+              </p>
+            </div>
           </div>
 
           {/* Contact Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-medium text-slate-650">
-            <a href="mailto:shahabdad50@gmail.com" className="flex items-center gap-2 hover:text-slate-900">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-2.5 text-sm font-medium text-slate-600 self-stretch md:self-auto md:text-right">
+            <a href="mailto:shahabdad50@gmail.com" className="flex items-center md:justify-end gap-2 hover:text-slate-900">
               <Mail size={14} className="text-slate-400" />
               shahabdad50@gmail.com
             </a>
-            <a href="tel:+923191796621" className="flex items-center gap-2 hover:text-slate-900">
+            <a href="tel:+923191796621" className="flex items-center md:justify-end gap-2 hover:text-slate-900">
               <Phone size={14} className="text-slate-400" />
               +92 319 1796621
             </a>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center md:justify-end gap-2">
               <MapPin size={14} className="text-slate-400" />
               Mardan, KPK, Pakistan
             </span>
-            <a href="https://github.com/shahabdad" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-slate-900">
+            <a href="https://github.com/shahabdad" target="_blank" rel="noopener noreferrer" className="flex items-center md:justify-end gap-2 hover:text-slate-900">
               <svg className="h-3.5 w-3.5 text-slate-400 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
               github.com/shahabdad
             </a>
-            <a href="https://linkedin.com/in/shahabdad" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-slate-900">
+            <a href="https://linkedin.com/in/shahabdad" target="_blank" rel="noopener noreferrer" className="flex items-center md:justify-end gap-2 hover:text-slate-900">
               <svg className="h-3.5 w-3.5 text-slate-400 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                 <rect width="4" height="12" x="2" y="9" />
@@ -147,7 +165,7 @@ export default function Resume() {
               </svg>
               linkedin.com/in/shahabdad
             </a>
-            <a href="https://shahabdad.dev" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-slate-900">
+            <a href="https://shahabdad.dev" target="_blank" rel="noopener noreferrer" className="flex items-center md:justify-end gap-2 hover:text-slate-900">
               <Globe size={14} className="text-slate-400" />
               shahabdad.dev
             </a>

@@ -323,3 +323,14 @@ a {
 .group:hover .ripple-slate {
   animation: ripple-effect-slate 1.2s infinite;
 }
+
+/* Hover Scroll effect for long landing pages */
+.hover-scroll-image {
+  object-fit: cover;
+  object-position: top;
+  transition: object-position 6s ease-in-out !important;
+}
+
+.group:hover .hover-scroll-image {
+  object-position: bottom;
+}
